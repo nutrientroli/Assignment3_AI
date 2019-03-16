@@ -1,0 +1,260 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34a7c8ca992f915438a96c2077353778, type: 3}
+  m_Name: BT_CUSTOMER
+  m_EditorClassIdentifier: 
+  brickName: Assets/BTs/BT_CUSTOMER.asset
+  xml: "\uFEFF<?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<BehaviorBricks xmlns:ref=\"urn:padaone\"
+    version=\"1.0\">\r\n  <BehaviorTree id=\"0\" />\r\n  <runtimeInfo>\r\n    <BehaviorTree
+    id=\"0\" guid=\"f000069a4f6a1e0469ff1a3547f97cd7\" nextId=\"41\">\r\n      <root>\r\n
+    \       <SequenceNode id=\"1\" />\r\n      </root>\r\n      <inputParams>\r\n
+    \       <inputValues>\r\n          <entry name=\"shooping bag\" type=\"UnityEngine.GameObject\"
+    isBlackboard=\"False\" />\r\n        </inputValues>\r\n      </inputParams>\r\n
+    \     <outputParams />\r\n      <localParams />\r\n    </BehaviorTree>\r\n    <SequenceNode
+    id=\"1\">\r\n      <children>\r\n        <elem>\r\n          <ParallelNode id=\"39\"
+    />\r\n        </elem>\r\n        <elem>\r\n          <ActionNode id=\"3\" />\r\n
+    \       </elem>\r\n        <elem>\r\n          <RepeatUntilSuccess id=\"5\" />\r\n
+    \       </elem>\r\n        <elem>\r\n          <RepeatUntilFailed id=\"23\" />\r\n
+    \       </elem>\r\n        <elem>\r\n          <ActionNode id=\"10\" />\r\n        </elem>\r\n
+    \       <elem>\r\n          <ParallelNode id=\"28\" />\r\n        </elem>\r\n
+    \     </children>\r\n      <inputParams />\r\n      <outputParams />\r\n      <localParams
+    />\r\n    </SequenceNode>\r\n    <ParallelNode id=\"39\" policy=\"AndPolicy\">\r\n
+    \     <children>\r\n        <elem>\r\n          <ActionNode id=\"2\" />\r\n        </elem>\r\n
+    \       <elem>\r\n          <ActionNode id=\"40\" />\r\n        </elem>\r\n      </children>\r\n
+    \     <inputParams />\r\n      <outputParams />\r\n      <localParams />\r\n    </ParallelNode>\r\n
+    \   <ActionNode id=\"3\" action=\"MyActions/Utter\">\r\n      <inputParams>\r\n
+    \       <inputValues>\r\n          <entry name=\"UtteranceIndex\" type=\"System.Int32\"
+    isBlackboard=\"False\" value=\"0\" />\r\n          <entry name=\"duration\" type=\"System.Single\"
+    isBlackboard=\"False\" value=\"2\" />\r\n        </inputValues>\r\n      </inputParams>\r\n
+    \     <outputParams />\r\n      <localParams />\r\n    </ActionNode>\r\n    <RepeatUntilSuccess
+    id=\"5\">\r\n      <child>\r\n        <ActionNode id=\"27\" />\r\n      </child>\r\n
+    \     <inputParams />\r\n      <outputParams />\r\n      <localParams />\r\n    </RepeatUntilSuccess>\r\n
+    \   <RepeatUntilFailed id=\"23\">\r\n      <child>\r\n        <ActionNode id=\"26\"
+    />\r\n      </child>\r\n      <inputParams />\r\n      <outputParams />\r\n      <localParams
+    />\r\n    </RepeatUntilFailed>\r\n    <ActionNode id=\"10\" action=\"MyActions/Utter\">\r\n
+    \     <inputParams>\r\n        <inputValues>\r\n          <entry name=\"UtteranceIndex\"
+    type=\"System.Int32\" isBlackboard=\"False\" value=\"4\" />\r\n          <entry
+    name=\"duration\" type=\"System.Single\" isBlackboard=\"False\" value=\"2\" />\r\n
+    \       </inputValues>\r\n      </inputParams>\r\n      <outputParams />\r\n      <localParams
+    />\r\n    </ActionNode>\r\n    <ParallelNode id=\"28\" policy=\"AndPolicy\">\r\n
+    \     <children>\r\n        <elem>\r\n          <ActionNode id=\"29\" />\r\n        </elem>\r\n
+    \       <elem>\r\n          <SelectorNode id=\"30\" />\r\n        </elem>\r\n
+    \     </children>\r\n      <inputParams />\r\n      <outputParams />\r\n      <localParams
+    />\r\n    </ParallelNode>\r\n    <ActionNode id=\"2\" action=\"MyActions/ArriveByTag\">\r\n
+    \     <inputParams>\r\n        <inputValues>\r\n          <entry name=\"tag\"
+    type=\"System.String\" isBlackboard=\"False\" value=\"STORE_ENTRANCE\" />\r\n
+    \         <entry name=\"closeEnough\" type=\"System.Single\" isBlackboard=\"False\"
+    value=\"2\" />\r\n        </inputValues>\r\n      </inputParams>\r\n      <outputParams
+    />\r\n      <localParams />\r\n    </ActionNode>\r\n    <ActionNode id=\"40\"
+    action=\"MyActions/Utter\">\r\n      <inputParams>\r\n        <inputValues>\r\n
+    \         <entry name=\"UtteranceIndex\" type=\"System.Int32\" isBlackboard=\"False\"
+    value=\"9\" />\r\n          <entry name=\"duration\" type=\"System.Single\" isBlackboard=\"False\"
+    value=\"2\" />\r\n        </inputValues>\r\n      </inputParams>\r\n      <outputParams
+    />\r\n      <localParams />\r\n    </ActionNode>\r\n    <ActionNode id=\"27\"
+    action=\"MyActions/QuestionIsEngagedInDialog\">\r\n      <inputParams />\r\n      <outputParams
+    />\r\n      <localParams />\r\n    </ActionNode>\r\n    <ActionNode id=\"26\"
+    action=\"MyActions/QuestionIsEngagedInDialog\">\r\n      <inputParams />\r\n      <outputParams
+    />\r\n      <localParams />\r\n    </ActionNode>\r\n    <ActionNode id=\"29\"
+    action=\"MyActions/ArriveByTag\">\r\n      <inputParams>\r\n        <inputValues>\r\n
+    \         <entry name=\"tag\" type=\"System.String\" isBlackboard=\"False\" value=\"EXIT_POINT\"
+    />\r\n          <entry name=\"closeEnough\" type=\"System.Single\" isBlackboard=\"False\"
+    value=\"2\" />\r\n        </inputValues>\r\n      </inputParams>\r\n      <outputParams
+    />\r\n      <localParams />\r\n    </ActionNode>\r\n    <SelectorNode id=\"30\">\r\n
+    \     <children>\r\n        <elem>\r\n          <SequenceNode id=\"31\" />\r\n
+    \       </elem>\r\n        <elem>\r\n          <SequenceNode id=\"35\" />\r\n
+    \       </elem>\r\n      </children>\r\n      <inputParams />\r\n      <outputParams
+    />\r\n      <localParams />\r\n    </SelectorNode>\r\n    <SequenceNode id=\"31\">\r\n
+    \     <children>\r\n        <elem>\r\n          <ConditionNode id=\"32\" />\r\n
+    \       </elem>\r\n        <elem>\r\n          <ActionNode id=\"38\" />\r\n        </elem>\r\n
+    \       <elem>\r\n          <ActionNode id=\"33\" />\r\n        </elem>\r\n        <elem>\r\n
+    \         <ActionNode id=\"34\" />\r\n        </elem>\r\n      </children>\r\n
+    \     <inputParams />\r\n      <outputParams />\r\n      <localParams />\r\n    </SequenceNode>\r\n
+    \   <SequenceNode id=\"35\">\r\n      <children>\r\n        <elem>\r\n          <ActionNode
+    id=\"36\" />\r\n        </elem>\r\n        <elem>\r\n          <ActionNode id=\"37\"
+    />\r\n        </elem>\r\n      </children>\r\n      <inputParams />\r\n      <outputParams
+    />\r\n      <localParams />\r\n    </SequenceNode>\r\n    <ConditionNode id=\"32\">\r\n
+    \     <condition>\r\n        <ConditionEvalNode id=\"0\" />\r\n      </condition>\r\n
+    \     <inputParams />\r\n      <outputParams />\r\n      <localParams />\r\n    </ConditionNode>\r\n
+    \   <ActionNode id=\"38\" action=\"GameObject/SetActive\">\r\n      <inputParams>\r\n
+    \       <inputValues>\r\n          <entry name=\"active\" type=\"System.Boolean\"
+    isBlackboard=\"False\" value=\"True\" />\r\n          <entry name=\"game object\"
+    type=\"UnityEngine.GameObject\" isBlackboard=\"True\" blackboard=\"shooping bag\"
+    />\r\n        </inputValues>\r\n      </inputParams>\r\n      <outputParams />\r\n
+    \     <localParams />\r\n    </ActionNode>\r\n    <ActionNode id=\"33\" action=\"MyActions/Utter\">\r\n
+    \     <inputParams>\r\n        <inputValues>\r\n          <entry name=\"UtteranceIndex\"
+    type=\"System.Int32\" isBlackboard=\"False\" value=\"5\" />\r\n          <entry
+    name=\"duration\" type=\"System.Single\" isBlackboard=\"False\" value=\"2\" />\r\n
+    \       </inputValues>\r\n      </inputParams>\r\n      <outputParams />\r\n      <localParams
+    />\r\n    </ActionNode>\r\n    <ActionNode id=\"34\" action=\"MyActions/Utter\">\r\n
+    \     <inputParams>\r\n        <inputValues>\r\n          <entry name=\"UtteranceIndex\"
+    type=\"System.Int32\" isBlackboard=\"False\" value=\"6\" />\r\n          <entry
+    name=\"duration\" type=\"System.Single\" isBlackboard=\"False\" value=\"2\" />\r\n
+    \       </inputValues>\r\n      </inputParams>\r\n      <outputParams />\r\n      <localParams
+    />\r\n    </ActionNode>\r\n    <ActionNode id=\"36\" action=\"MyActions/Utter\">\r\n
+    \     <inputParams>\r\n        <inputValues>\r\n          <entry name=\"UtteranceIndex\"
+    type=\"System.Int32\" isBlackboard=\"False\" value=\"7\" />\r\n          <entry
+    name=\"duration\" type=\"System.Single\" isBlackboard=\"False\" value=\"2\" />\r\n
+    \       </inputValues>\r\n      </inputParams>\r\n      <outputParams />\r\n      <localParams
+    />\r\n    </ActionNode>\r\n    <ActionNode id=\"37\" action=\"MyActions/Utter\">\r\n
+    \     <inputParams>\r\n        <inputValues>\r\n          <entry name=\"UtteranceIndex\"
+    type=\"System.Int32\" isBlackboard=\"False\" value=\"8\" />\r\n          <entry
+    name=\"duration\" type=\"System.Single\" isBlackboard=\"False\" value=\"2\" />\r\n
+    \       </inputValues>\r\n      </inputParams>\r\n      <outputParams />\r\n      <localParams
+    />\r\n    </ActionNode>\r\n    <ConditionEvalNode id=\"0\" policy=\"ATOMIC_CHECK\"
+    name=\"MyConditions/InGoodMood\">\r\n      <inputParams />\r\n      <outputParams
+    />\r\n      <localParams />\r\n    </ConditionEvalNode>\r\n  </runtimeInfo>\r\n
+    \ <editorInfo>\r\n    <BehaviorTree id=\"0\" _name=\"BT_CUSTOMER\" _description=\"\"
+    _removeIfClosed=\"False\">\r\n      <_rootList>\r\n        <elem>\r\n          <SequenceNode
+    id=\"1\" />\r\n        </elem>\r\n        <elem>\r\n          <ActionNode id=\"2\"
+    />\r\n        </elem>\r\n        <elem>\r\n          <ActionNode id=\"3\" />\r\n
+    \       </elem>\r\n        <elem>\r\n          <RepeatUntilSuccess id=\"5\" />\r\n
+    \       </elem>\r\n        <elem>\r\n          <ActionNode id=\"10\" />\r\n        </elem>\r\n
+    \       <elem>\r\n          <RepeatUntilFailed id=\"23\" />\r\n        </elem>\r\n
+    \       <elem>\r\n          <ActionNode id=\"26\" />\r\n        </elem>\r\n        <elem>\r\n
+    \         <ActionNode id=\"27\" />\r\n        </elem>\r\n        <elem>\r\n          <ParallelNode
+    id=\"28\" />\r\n        </elem>\r\n        <elem>\r\n          <ActionNode id=\"29\"
+    />\r\n        </elem>\r\n        <elem>\r\n          <SelectorNode id=\"30\" />\r\n
+    \       </elem>\r\n        <elem>\r\n          <SequenceNode id=\"31\" />\r\n
+    \       </elem>\r\n        <elem>\r\n          <ConditionNode id=\"32\" />\r\n
+    \       </elem>\r\n        <elem>\r\n          <ActionNode id=\"33\" />\r\n        </elem>\r\n
+    \       <elem>\r\n          <ActionNode id=\"34\" />\r\n        </elem>\r\n        <elem>\r\n
+    \         <SequenceNode id=\"35\" />\r\n        </elem>\r\n        <elem>\r\n
+    \         <ActionNode id=\"36\" />\r\n        </elem>\r\n        <elem>\r\n          <ActionNode
+    id=\"37\" />\r\n        </elem>\r\n        <elem>\r\n          <ActionNode id=\"38\"
+    />\r\n        </elem>\r\n        <elem>\r\n          <ParallelNode id=\"39\" />\r\n
+    \       </elem>\r\n        <elem>\r\n          <ActionNode id=\"40\" />\r\n        </elem>\r\n
+    \     </_rootList>\r\n      <_nodes>\r\n        <nodes>\r\n          <SequenceNode
+    id=\"1\" />\r\n          <ActionNode id=\"2\" />\r\n          <ActionNode id=\"3\"
+    />\r\n          <RepeatUntilSuccess id=\"5\" />\r\n          <ActionNode id=\"27\"
+    />\r\n          <ActionNode id=\"10\" />\r\n          <RepeatUntilFailed id=\"23\"
+    />\r\n          <ActionNode id=\"26\" />\r\n          <ParallelNode id=\"28\"
+    />\r\n          <ActionNode id=\"29\" />\r\n          <SelectorNode id=\"30\"
+    />\r\n          <SequenceNode id=\"31\" />\r\n          <ConditionNode id=\"32\"
+    />\r\n          <ActionNode id=\"33\" />\r\n          <ActionNode id=\"34\" />\r\n
+    \         <SequenceNode id=\"35\" />\r\n          <ActionNode id=\"36\" />\r\n
+    \         <ActionNode id=\"37\" />\r\n          <ActionNode id=\"38\" />\r\n          <ParallelNode
+    id=\"39\" />\r\n          <ActionNode id=\"40\" />\r\n        </nodes>\r\n      </_nodes>\r\n
+    \   </BehaviorTree>\r\n    <SequenceNode id=\"1\">\r\n      <_data>\r\n        <data
+    breakpoint=\"0\" selected=\"False\" position=\"958.363 353.4046\" name=\"Sequence\"
+    description=\"Executes all its children in sequence until all of them are successful\"
+    cardinality=\"-1\" hasParent=\"False\">\r\n          <BehaviorTree id=\"0\" />\r\n
+    \         <SequenceNode id=\"1\" />\r\n        </data>\r\n      </_data>\r\n    </SequenceNode>\r\n
+    \   <ParallelNode id=\"39\">\r\n      <_data>\r\n        <data breakpoint=\"0\"
+    selected=\"False\" position=\"326.0417 457.8333\" name=\"Parallel\" description=\"Executes
+    all its children in parallel until all of them are successful\" cardinality=\"-1\"
+    hasParent=\"True\">\r\n          <BehaviorTree id=\"0\" />\r\n          <ParallelNode
+    id=\"39\" />\r\n          <SequenceNode id=\"1\" />\r\n        </data>\r\n      </_data>\r\n
+    \   </ParallelNode>\r\n    <ActionNode id=\"3\">\r\n      <_data>\r\n        <data
+    breakpoint=\"0\" selected=\"False\" position=\"552.2986 473.0398\" name=\"MyActions/Utter\"
+    description=\"sets an utterance by index\" cardinality=\"0\" hasParent=\"True\">\r\n
+    \         <BehaviorTree id=\"0\" />\r\n          <ActionNode id=\"3\" />\r\n          <SequenceNode
+    id=\"1\" />\r\n        </data>\r\n      </_data>\r\n    </ActionNode>\r\n    <RepeatUntilSuccess
+    id=\"5\">\r\n      <_data>\r\n        <data breakpoint=\"0\" selected=\"False\"
+    position=\"646.2564 670.1195\" name=\"Repeat Until Success\" description=\"Repeats
+    the execution of its child node until it success\" cardinality=\"1\" hasParent=\"True\">\r\n
+    \         <BehaviorTree id=\"0\" />\r\n          <RepeatUntilSuccess id=\"5\"
+    />\r\n          <SequenceNode id=\"1\" />\r\n        </data>\r\n      </_data>\r\n
+    \   </RepeatUntilSuccess>\r\n    <RepeatUntilFailed id=\"23\">\r\n      <_data>\r\n
+    \       <data breakpoint=\"0\" selected=\"False\" position=\"978.917 662.5836\"
+    name=\"Repeat Until Failed\" description=\"Repeats the execution of its child
+    node until it fails\" cardinality=\"1\" hasParent=\"True\">\r\n          <BehaviorTree
+    id=\"0\" />\r\n          <RepeatUntilFailed id=\"23\" />\r\n          <SequenceNode
+    id=\"1\" />\r\n        </data>\r\n      </_data>\r\n    </RepeatUntilFailed>\r\n
+    \   <ActionNode id=\"10\">\r\n      <_data>\r\n        <data breakpoint=\"0\"
+    selected=\"False\" position=\"1180.219 511.083\" name=\"MyActions/Utter\" description=\"sets
+    an utterance by index\" cardinality=\"0\" hasParent=\"True\">\r\n          <BehaviorTree
+    id=\"0\" />\r\n          <ActionNode id=\"10\" />\r\n          <SequenceNode id=\"1\"
+    />\r\n        </data>\r\n      </_data>\r\n    </ActionNode>\r\n    <ParallelNode
+    id=\"28\">\r\n      <_data>\r\n        <data breakpoint=\"0\" selected=\"False\"
+    position=\"1618.499 494.6669\" name=\"Parallel\" description=\"Executes all its
+    children in parallel until all of them are successful\" cardinality=\"-1\" hasParent=\"True\">\r\n
+    \         <BehaviorTree id=\"0\" />\r\n          <ParallelNode id=\"28\" />\r\n
+    \         <SequenceNode id=\"1\" />\r\n        </data>\r\n      </_data>\r\n    </ParallelNode>\r\n
+    \   <ActionNode id=\"2\">\r\n      <_data>\r\n        <data breakpoint=\"0\" selected=\"False\"
+    position=\"166.5055 589.2307\" name=\"MyActions/ArriveByTag\" description=\"Goes
+    to (ARRIVES) a location specifieb with a tag\" cardinality=\"0\" hasParent=\"True\">\r\n
+    \         <BehaviorTree id=\"0\" />\r\n          <ActionNode id=\"2\" />\r\n          <ParallelNode
+    id=\"39\" />\r\n        </data>\r\n      </_data>\r\n    </ActionNode>\r\n    <ActionNode
+    id=\"40\">\r\n      <_data>\r\n        <data breakpoint=\"0\" selected=\"False\"
+    position=\"394.0417 583.8336\" name=\"MyActions/Utter\" description=\"sets an
+    utterance by index\" cardinality=\"0\" hasParent=\"True\">\r\n          <BehaviorTree
+    id=\"0\" />\r\n          <ActionNode id=\"40\" />\r\n          <ParallelNode id=\"39\"
+    />\r\n        </data>\r\n      </_data>\r\n    </ActionNode>\r\n    <ActionNode
+    id=\"27\">\r\n      <_data>\r\n        <data breakpoint=\"0\" selected=\"False\"
+    position=\"615.9529 823.2975\" name=\"MyActions/QuestionIsEngagedInDialog\" description=\"succeds
+    only if agent is engaged in a dialog\" cardinality=\"0\" hasParent=\"True\">\r\n
+    \         <BehaviorTree id=\"0\" />\r\n          <ActionNode id=\"27\" />\r\n
+    \         <RepeatUntilSuccess id=\"5\" />\r\n        </data>\r\n      </_data>\r\n
+    \   </ActionNode>\r\n    <ActionNode id=\"26\">\r\n      <_data>\r\n        <data
+    breakpoint=\"0\" selected=\"False\" position=\"951.0598 816.2616\" name=\"MyActions/QuestionIsEngagedInDialog\"
+    description=\"succeds only if agent is engaged in a dialog\" cardinality=\"0\"
+    hasParent=\"True\">\r\n          <BehaviorTree id=\"0\" />\r\n          <ActionNode
+    id=\"26\" />\r\n          <RepeatUntilFailed id=\"23\" />\r\n        </data>\r\n
+    \     </_data>\r\n    </ActionNode>\r\n    <ActionNode id=\"29\">\r\n      <_data>\r\n
+    \       <data breakpoint=\"0\" selected=\"False\" position=\"1386.833 636.3335\"
+    name=\"MyActions/ArriveByTag\" description=\"Goes to (ARRIVES) a location specifieb
+    with a tag\" cardinality=\"0\" hasParent=\"True\">\r\n          <BehaviorTree
+    id=\"0\" />\r\n          <ActionNode id=\"29\" />\r\n          <ParallelNode id=\"28\"
+    />\r\n        </data>\r\n      </_data>\r\n    </ActionNode>\r\n    <SelectorNode
+    id=\"30\">\r\n      <_data>\r\n        <data breakpoint=\"0\" selected=\"False\"
+    position=\"1801.833 629.6667\" name=\"Selector\" description=\"Executes all its
+    children until one of them is successful\" cardinality=\"-1\" hasParent=\"True\">\r\n
+    \         <BehaviorTree id=\"0\" />\r\n          <SelectorNode id=\"30\" />\r\n
+    \         <ParallelNode id=\"28\" />\r\n        </data>\r\n      </_data>\r\n
+    \   </SelectorNode>\r\n    <SequenceNode id=\"31\">\r\n      <_data>\r\n        <data
+    breakpoint=\"0\" selected=\"False\" position=\"1505.165 829.6666\" name=\"Sequence\"
+    description=\"Executes all its children in sequence until all of them are successful\"
+    cardinality=\"-1\" hasParent=\"True\">\r\n          <BehaviorTree id=\"0\" />\r\n
+    \         <SequenceNode id=\"31\" />\r\n          <SelectorNode id=\"30\" />\r\n
+    \       </data>\r\n      </_data>\r\n    </SequenceNode>\r\n    <SequenceNode
+    id=\"35\">\r\n      <_data>\r\n        <data breakpoint=\"0\" selected=\"False\"
+    position=\"1866.833 822.9996\" name=\"Sequence\" description=\"Executes all its
+    children in sequence until all of them are successful\" cardinality=\"-1\" hasParent=\"True\">\r\n
+    \         <BehaviorTree id=\"0\" />\r\n          <SequenceNode id=\"35\" />\r\n
+    \         <SelectorNode id=\"30\" />\r\n        </data>\r\n      </_data>\r\n
+    \   </SequenceNode>\r\n    <ConditionNode id=\"32\">\r\n      <_data>\r\n        <data
+    breakpoint=\"0\" selected=\"False\" position=\"1150.166 1094.667\" name=\"MyConditions/InGoodMood\"
+    description=\"is the agent in a good mood or not?\" cardinality=\"0\" hasParent=\"True\">\r\n
+    \         <BehaviorTree id=\"0\" />\r\n          <ConditionNode id=\"32\" />\r\n
+    \         <SequenceNode id=\"31\" />\r\n        </data>\r\n      </_data>\r\n
+    \   </ConditionNode>\r\n    <ActionNode id=\"38\">\r\n      <_data>\r\n        <data
+    breakpoint=\"0\" selected=\"False\" position=\"1318.499 1089.667\" name=\"GameObject/SetActive\"
+    description=\"Activates or deactivates the game object\" cardinality=\"0\" hasParent=\"True\">\r\n
+    \         <BehaviorTree id=\"0\" />\r\n          <ActionNode id=\"38\" />\r\n
+    \         <SequenceNode id=\"31\" />\r\n        </data>\r\n      </_data>\r\n
+    \   </ActionNode>\r\n    <ActionNode id=\"33\">\r\n      <_data>\r\n        <data
+    breakpoint=\"0\" selected=\"False\" position=\"1476.832 1088\" name=\"MyActions/Utter\"
+    description=\"sets an utterance by index\" cardinality=\"0\" hasParent=\"True\">\r\n
+    \         <BehaviorTree id=\"0\" />\r\n          <ActionNode id=\"33\" />\r\n
+    \         <SequenceNode id=\"31\" />\r\n        </data>\r\n      </_data>\r\n
+    \   </ActionNode>\r\n    <ActionNode id=\"34\">\r\n      <_data>\r\n        <data
+    breakpoint=\"0\" selected=\"False\" position=\"1595.166 1089.667\" name=\"MyActions/Utter\"
+    description=\"sets an utterance by index\" cardinality=\"0\" hasParent=\"True\">\r\n
+    \         <BehaviorTree id=\"0\" />\r\n          <ActionNode id=\"34\" />\r\n
+    \         <SequenceNode id=\"31\" />\r\n        </data>\r\n      </_data>\r\n
+    \   </ActionNode>\r\n    <ActionNode id=\"36\">\r\n      <_data>\r\n        <data
+    breakpoint=\"0\" selected=\"False\" position=\"1765.5 993.6664\" name=\"MyActions/Utter\"
+    description=\"sets an utterance by index\" cardinality=\"0\" hasParent=\"True\">\r\n
+    \         <BehaviorTree id=\"0\" />\r\n          <ActionNode id=\"36\" />\r\n
+    \         <SequenceNode id=\"35\" />\r\n        </data>\r\n      </_data>\r\n
+    \   </ActionNode>\r\n    <ActionNode id=\"37\">\r\n      <_data>\r\n        <data
+    breakpoint=\"0\" selected=\"False\" position=\"1911.833 994.6664\" name=\"MyActions/Utter\"
+    description=\"sets an utterance by index\" cardinality=\"0\" hasParent=\"True\">\r\n
+    \         <BehaviorTree id=\"0\" />\r\n          <ActionNode id=\"37\" />\r\n
+    \         <SequenceNode id=\"35\" />\r\n        </data>\r\n      </_data>\r\n
+    \   </ActionNode>\r\n    <ConditionEvalNode id=\"0\">\r\n      <_data>\r\n        <data
+    breakpoint=\"0\" selected=\"False\" position=\"0 0\" name=\"AlwaysTrue\" description=\"Eval\"
+    cardinality=\"1\" hasParent=\"False\">\r\n          <BehaviorTree id=\"0\" />\r\n
+    \       </data>\r\n      </_data>\r\n    </ConditionEvalNode>\r\n  </editorInfo>\r\n</BehaviorBricks>"
+  zoom: 0.6
+  subslist: []
+  _guid: f000069a4f6a1e0469ff1a3547f97cd7
