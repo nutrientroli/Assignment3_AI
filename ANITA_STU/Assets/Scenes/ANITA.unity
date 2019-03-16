@@ -646,7 +646,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxTasksPerTick: 500
-  behavior: {fileID: 0}
+  behavior: {fileID: 11400000, guid: 44799048b1d0bd447b876674653d1192, type: 2}
   paused: 0
   restartWhenFinished: 0
   blackboard:
@@ -665,8 +665,16 @@ MonoBehaviour:
     colorParams: []
     colorParamsNames: []
     colorParamsLostDefaultValue: 
-    objectParams: []
-    objectParamsNames: []
+    objectParams:
+    - {fileID: 246163469}
+    - {fileID: 1776454758}
+    - {fileID: 742560869}
+    - {fileID: 1936850810}
+    objectParamsNames:
+    - storePoint
+    - Sing
+    - Broom
+    - attractor
     objectParamsLostDefaultValue: 
     layerMaskParams: []
     layerMaskParamsNames: []
