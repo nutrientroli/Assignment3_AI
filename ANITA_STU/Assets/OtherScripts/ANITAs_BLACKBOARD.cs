@@ -27,7 +27,11 @@ public class ANITAs_BLACKBOARD : MonoBehaviour, IDialogSystem
         "Yes, well sell that!",
         "Here you have!!!\nEnjoy it!", // 14
         "What a pity!!!\nNone left!",
-        "Waiting for a customer..." // 16
+        "Waiting for a customer...", // 16
+
+        "let me take a look at our storage", // 17
+        
+
     };
     
    
