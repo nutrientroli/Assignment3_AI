@@ -888,7 +888,7 @@ MonoBehaviour:
   wanderRadius: 10
   wanderOffset: 20
   attractor: {fileID: 0}
-  seekWeight: 0.2
+  seekWeight: 0.55
 --- !u!1 &869024204
 GameObject:
   m_ObjectHideFlags: 0
