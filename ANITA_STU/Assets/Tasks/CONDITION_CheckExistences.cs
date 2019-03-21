@@ -4,17 +4,19 @@ using BBUnity.Conditions;
 
 
 [Condition("MyConditions/CheckExistences")]
-[Help("Check whether we have that (item) or not")]
+[Help("Check whether we have that (item) or not, use the bool to check the storage instead (know why we did this in this way on the report)")]
 
 public class CONDITION_CheckExistences : GOCondition
 {
     [InParam("item")]
-    string item;
+    public string item;
+
+    [InParam("checkStorageInstead")]
+    public bool checkStorage;
 
     // only relevant method for conditions. Perform a check and return the result
     public override bool Check()
     {
-        
 
         ANITAs_BLACKBOARD blackboard = gameObject.GetComponent<ANITAs_BLACKBOARD>();
         if (blackboard == null)
@@ -23,7 +25,17 @@ public class CONDITION_CheckExistences : GOCondition
             return false;
         }
         else
-            return blackboard.CheckExistences(item);
+        {
+            if (checkStorage)
+            {
+                return blackboard.CheckStorage(item);
+
+            } else
+            {
+                return blackboard.CheckExistences(item);
+            }
+        }
+
         
 
     }

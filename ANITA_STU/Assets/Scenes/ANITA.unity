@@ -124,7 +124,7 @@ GameObject:
   - component: {fileID: 88127869}
   m_Layer: 0
   m_Name: APPLE_Table
-  m_TagString: Untagged
+  m_TagString: APPLE
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -978,8 +978,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c019828622f74c41aa8c217ceab3601, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  peaches: 2
+  peaches: 0
   apples: 2
+  peachesOnStorage: 0
+  applesOnStorage: 1
   utterances:
   - 'Its getting dark.
 
@@ -1031,6 +1033,8 @@ MonoBehaviour:
     None left!'
   - Waiting for a customer...
   - Let me take a look at our storage...
+  - You got lucky! We do have some on storage
+  - (Nope, just empty boxes..)
 --- !u!114 &808722905
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1061,7 +1065,7 @@ GameObject:
   - component: {fileID: 862329021}
   m_Layer: 0
   m_Name: PEACH_Table
-  m_TagString: Untagged
+  m_TagString: PEACH
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -1249,7 +1253,7 @@ GameObject:
   - component: {fileID: 1255044430}
   m_Layer: 0
   m_Name: STORAGE
-  m_TagString: Untagged
+  m_TagString: STORAGE
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -1261,15 +1265,15 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1255044429}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 199.8, y: -39.5, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0.70710456, w: 0.70710903}
+  m_LocalPosition: {x: 130.1, y: -66.4, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 88127868}
   - {fileID: 862329020}
   m_Father: {fileID: 0}
   m_RootOrder: 10
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90.00001}
 --- !u!1 &1410754353
 GameObject:
   m_ObjectHideFlags: 0

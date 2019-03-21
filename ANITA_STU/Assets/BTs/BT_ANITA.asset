@@ -15,7 +15,7 @@ MonoBehaviour:
   brickName: Assets/BTs/BT_ANITA.asset
   xml: "\uFEFF<?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<BehaviorBricks xmlns:ref=\"urn:padaone\"
     version=\"1.0\">\r\n  <BehaviorTree id=\"0\" />\r\n  <runtimeInfo>\r\n    <BehaviorTree
-    id=\"0\" guid=\"44799048b1d0bd447b876674653d1192\" nextId=\"42\">\r\n      <root>\r\n
+    id=\"0\" guid=\"44799048b1d0bd447b876674653d1192\" nextId=\"87\">\r\n      <root>\r\n
     \       <PrioritySelectorNode id=\"7\" />\r\n      </root>\r\n      <inputParams>\r\n
     \       <inputValues>\r\n          <entry name=\"storePoint\" type=\"UnityEngine.GameObject\"
     isBlackboard=\"False\" />\r\n          <entry name=\"Sing\" type=\"UnityEngine.GameObject\"
@@ -124,10 +124,11 @@ MonoBehaviour:
     \   </ActionNode>\r\n    <ActionNode id=\"33\" action=\"MyActions/TellEngaged\">\r\n
     \     <inputParams>\r\n        <inputValues>\r\n          <entry name=\"index\"
     type=\"System.Int32\" isBlackboard=\"False\" value=\"13\" />\r\n          <entry
-    name=\"duration\" type=\"System.Int32\" isBlackboard=\"False\" value=\"2\" />\r\n
+    name=\"duration\" type=\"System.Int32\" isBlackboard=\"False\" value=\"4\" />\r\n
     \       </inputValues>\r\n      </inputParams>\r\n      <outputParams />\r\n      <localParams
     />\r\n    </ActionNode>\r\n    <SelectorNode id=\"34\">\r\n      <children>\r\n
     \       <elem>\r\n          <SequenceNode id=\"25\" />\r\n        </elem>\r\n
+    \       <elem>\r\n          <SequenceNode id=\"42\" />\r\n        </elem>\r\n
     \       <elem>\r\n          <SequenceNode id=\"35\" />\r\n        </elem>\r\n
     \     </children>\r\n      <inputParams />\r\n      <outputParams />\r\n      <localParams
     />\r\n    </SelectorNode>\r\n    <ActionNode id=\"40\" action=\"MyActions/TellEngaged\">\r\n
@@ -138,67 +139,171 @@ MonoBehaviour:
     />\r\n    </ActionNode>\r\n    <ActionNode id=\"41\" action=\"MyActions/DisengageFromDialog\">\r\n
     \     <inputParams />\r\n      <outputParams />\r\n      <localParams />\r\n    </ActionNode>\r\n
     \   <SequenceNode id=\"25\">\r\n      <children>\r\n        <elem>\r\n          <ConditionNode
-    id=\"24\" />\r\n        </elem>\r\n        <elem>\r\n          <ActionNode id=\"37\"
+    id=\"61\" />\r\n        </elem>\r\n        <elem>\r\n          <ActionNode id=\"37\"
     />\r\n        </elem>\r\n        <elem>\r\n          <ActionNode id=\"26\" />\r\n
     \       </elem>\r\n        <elem>\r\n          <ActionNode id=\"38\" />\r\n        </elem>\r\n
+    \     </children>\r\n      <inputParams />\r\n      <outputParams />\r\n      <localParams
+    />\r\n    </SequenceNode>\r\n    <SequenceNode id=\"42\">\r\n      <children>\r\n
+    \       <elem>\r\n          <SequenceNode id=\"56\" />\r\n        </elem>\r\n
+    \       <elem>\r\n          <SequenceNode id=\"58\" />\r\n        </elem>\r\n
     \     </children>\r\n      <inputParams />\r\n      <outputParams />\r\n      <localParams
     />\r\n    </SequenceNode>\r\n    <SequenceNode id=\"35\">\r\n      <children>\r\n
     \       <elem>\r\n          <ActionNode id=\"36\" />\r\n        </elem>\r\n        <elem>\r\n
     \         <ActionNode id=\"27\" />\r\n        </elem>\r\n      </children>\r\n
     \     <inputParams />\r\n      <outputParams />\r\n      <localParams />\r\n    </SequenceNode>\r\n
-    \   <ConditionNode id=\"24\">\r\n      <condition>\r\n        <ConditionEvalNode
+    \   <ConditionNode id=\"61\">\r\n      <condition>\r\n        <ConditionEvalNode
     id=\"0\" />\r\n      </condition>\r\n      <inputParams>\r\n        <inputValues>\r\n
     \         <entry name=\"item\" type=\"System.String\" isBlackboard=\"True\" blackboard=\"itemRequested\"
+    />\r\n          <entry name=\"checkStorageInstead\" type=\"System.Boolean\" isBlackboard=\"False\"
+    value=\"False\" />\r\n        </inputValues>\r\n      </inputParams>\r\n      <outputParams
+    />\r\n      <localParams />\r\n    </ConditionNode>\r\n    <ActionNode id=\"37\"
+    action=\"MyActions/TellEngaged\">\r\n      <inputParams>\r\n        <inputValues>\r\n
+    \         <entry name=\"index\" type=\"System.Int32\" isBlackboard=\"False\" value=\"14\"
+    />\r\n          <entry name=\"duration\" type=\"System.Int32\" isBlackboard=\"False\"
+    value=\"2\" />\r\n        </inputValues>\r\n      </inputParams>\r\n      <outputParams
+    />\r\n      <localParams />\r\n    </ActionNode>\r\n    <ActionNode id=\"26\"
+    action=\"MyActions/Sell\">\r\n      <inputParams>\r\n        <inputValues>\r\n
+    \         <entry name=\"item\" type=\"System.String\" isBlackboard=\"True\" blackboard=\"itemRequested\"
     />\r\n        </inputValues>\r\n      </inputParams>\r\n      <outputParams />\r\n
-    \     <localParams />\r\n    </ConditionNode>\r\n    <ActionNode id=\"37\" action=\"MyActions/TellEngaged\">\r\n
-    \     <inputParams>\r\n        <inputValues>\r\n          <entry name=\"index\"
-    type=\"System.Int32\" isBlackboard=\"False\" value=\"14\" />\r\n          <entry
-    name=\"duration\" type=\"System.Int32\" isBlackboard=\"False\" value=\"2\" />\r\n
-    \       </inputValues>\r\n      </inputParams>\r\n      <outputParams />\r\n      <localParams
-    />\r\n    </ActionNode>\r\n    <ActionNode id=\"26\" action=\"MyActions/Sell\">\r\n
-    \     <inputParams>\r\n        <inputValues>\r\n          <entry name=\"item\"
-    type=\"System.String\" isBlackboard=\"True\" blackboard=\"itemRequested\" />\r\n
-    \       </inputValues>\r\n      </inputParams>\r\n      <outputParams />\r\n      <localParams
-    />\r\n    </ActionNode>\r\n    <ActionNode id=\"38\" action=\"MyActions/DisengageFromDialog\">\r\n
+    \     <localParams />\r\n    </ActionNode>\r\n    <ActionNode id=\"38\" action=\"MyActions/DisengageFromDialog\">\r\n
     \     <inputParams />\r\n      <outputParams />\r\n      <localParams />\r\n    </ActionNode>\r\n
-    \   <ActionNode id=\"36\" action=\"MyActions/TellEngaged\">\r\n      <inputParams>\r\n
+    \   <SequenceNode id=\"56\">\r\n      <children>\r\n        <elem>\r\n          <ActionNode
+    id=\"45\" />\r\n        </elem>\r\n        <elem>\r\n          <ActionNode id=\"44\"
+    />\r\n        </elem>\r\n        <elem>\r\n          <SelectorNode id=\"86\" />\r\n
+    \       </elem>\r\n      </children>\r\n      <inputParams />\r\n      <outputParams
+    />\r\n      <localParams />\r\n    </SequenceNode>\r\n    <SequenceNode id=\"58\">\r\n
+    \     <children>\r\n        <elem>\r\n          <ConditionNode id=\"63\" />\r\n
+    \       </elem>\r\n        <elem>\r\n          <ActionNode id=\"48\" />\r\n        </elem>\r\n
+    \       <elem>\r\n          <ActionNode id=\"51\" />\r\n        </elem>\r\n        <elem>\r\n
+    \         <ActionNode id=\"49\" />\r\n        </elem>\r\n        <elem>\r\n          <ActionNode
+    id=\"50\" />\r\n        </elem>\r\n      </children>\r\n      <inputParams />\r\n
+    \     <outputParams />\r\n      <localParams />\r\n    </SequenceNode>\r\n    <ActionNode
+    id=\"36\" action=\"MyActions/TellEngaged\">\r\n      <inputParams>\r\n        <inputValues>\r\n
+    \         <entry name=\"index\" type=\"System.Int32\" isBlackboard=\"False\" value=\"15\"
+    />\r\n          <entry name=\"duration\" type=\"System.Int32\" isBlackboard=\"False\"
+    value=\"2\" />\r\n        </inputValues>\r\n      </inputParams>\r\n      <outputParams
+    />\r\n      <localParams />\r\n    </ActionNode>\r\n    <ActionNode id=\"27\"
+    action=\"MyActions/DisengageFromDialog\">\r\n      <inputParams />\r\n      <outputParams
+    />\r\n      <localParams />\r\n    </ActionNode>\r\n    <ConditionEvalNode id=\"0\"
+    policy=\"ATOMIC_CHECK\" name=\"MyConditions/CheckExistences\">\r\n      <inputParams
+    />\r\n      <outputParams />\r\n      <localParams />\r\n    </ConditionEvalNode>\r\n
+    \   <ActionNode id=\"45\" action=\"MyActions/TellEngaged\">\r\n      <inputParams>\r\n
     \       <inputValues>\r\n          <entry name=\"index\" type=\"System.Int32\"
-    isBlackboard=\"False\" value=\"15\" />\r\n          <entry name=\"duration\" type=\"System.Int32\"
+    isBlackboard=\"False\" value=\"17\" />\r\n          <entry name=\"duration\" type=\"System.Int32\"
     isBlackboard=\"False\" value=\"2\" />\r\n        </inputValues>\r\n      </inputParams>\r\n
     \     <outputParams />\r\n      <localParams />\r\n    </ActionNode>\r\n    <ActionNode
-    id=\"27\" action=\"MyActions/DisengageFromDialog\">\r\n      <inputParams />\r\n
-    \     <outputParams />\r\n      <localParams />\r\n    </ActionNode>\r\n    <ConditionEvalNode
-    id=\"0\" policy=\"ATOMIC_CHECK\" name=\"MyConditions/CheckExistences\">\r\n      <inputParams
-    />\r\n      <outputParams />\r\n      <localParams />\r\n    </ConditionEvalNode>\r\n
-    \ </runtimeInfo>\r\n  <editorInfo>\r\n    <BehaviorTree id=\"0\" _name=\"BT_ANITA\"
-    _description=\"\" _removeIfClosed=\"False\">\r\n      <_rootList>\r\n        <elem>\r\n
-    \         <SequenceNode id=\"5\" />\r\n        </elem>\r\n        <elem>\r\n          <SequenceNode
-    id=\"6\" />\r\n        </elem>\r\n        <elem>\r\n          <PrioritySelectorNode
-    id=\"7\" />\r\n        </elem>\r\n        <elem>\r\n          <ConditionEvalNode
-    id=\"8\" />\r\n        </elem>\r\n        <elem>\r\n          <ConditionEvalNode
-    id=\"9\" />\r\n        </elem>\r\n        <elem>\r\n          <ActionNode id=\"10\"
-    />\r\n        </elem>\r\n        <elem>\r\n          <ActionNode id=\"11\" />\r\n
-    \       </elem>\r\n        <elem>\r\n          <ActionNode id=\"12\" />\r\n        </elem>\r\n
-    \       <elem>\r\n          <SequenceNode id=\"13\" />\r\n        </elem>\r\n
-    \       <elem>\r\n          <ActionNode id=\"14\" />\r\n        </elem>\r\n        <elem>\r\n
-    \         <ActionNode id=\"15\" />\r\n        </elem>\r\n        <elem>\r\n          <ActionNode
-    id=\"16\" />\r\n        </elem>\r\n        <elem>\r\n          <ActionNode id=\"17\"
-    />\r\n        </elem>\r\n        <elem>\r\n          <ActionNode id=\"18\" />\r\n
-    \       </elem>\r\n        <elem>\r\n          <ActionNode id=\"19\" />\r\n        </elem>\r\n
-    \       <elem>\r\n          <SelectorNode id=\"20\" />\r\n        </elem>\r\n
-    \       <elem>\r\n          <ActionNode id=\"21\" />\r\n        </elem>\r\n        <elem>\r\n
-    \         <ConditionNode id=\"24\" />\r\n        </elem>\r\n        <elem>\r\n
-    \         <SequenceNode id=\"25\" />\r\n        </elem>\r\n        <elem>\r\n
-    \         <ActionNode id=\"26\" />\r\n        </elem>\r\n        <elem>\r\n          <ActionNode
-    id=\"27\" />\r\n        </elem>\r\n        <elem>\r\n          <SequenceNode id=\"31\"
-    />\r\n        </elem>\r\n        <elem>\r\n          <ActionNode id=\"33\" />\r\n
-    \       </elem>\r\n        <elem>\r\n          <SelectorNode id=\"34\" />\r\n
+    id=\"44\" action=\"MyActions/ArriveByTag\">\r\n      <inputParams>\r\n        <inputValues>\r\n
+    \         <entry name=\"tag\" type=\"System.String\" isBlackboard=\"False\" value=\"STORAGE\"
+    />\r\n          <entry name=\"closeEnough\" type=\"System.Single\" isBlackboard=\"False\"
+    value=\"0.5\" />\r\n        </inputValues>\r\n      </inputParams>\r\n      <outputParams
+    />\r\n      <localParams />\r\n    </ActionNode>\r\n    <SelectorNode id=\"86\">\r\n
+    \     <children>\r\n        <elem>\r\n          <SequenceNode id=\"77\" />\r\n
+    \       </elem>\r\n        <elem>\r\n          <SequenceNode id=\"85\" />\r\n
+    \       </elem>\r\n      </children>\r\n      <inputParams />\r\n      <outputParams
+    />\r\n      <localParams />\r\n    </SelectorNode>\r\n    <ConditionNode id=\"63\">\r\n
+    \     <condition>\r\n        <ConditionEvalNode id=\"0\" />\r\n      </condition>\r\n
+    \     <inputParams>\r\n        <inputValues>\r\n          <entry name=\"item\"
+    type=\"System.String\" isBlackboard=\"True\" blackboard=\"itemRequested\" />\r\n
+    \         <entry name=\"checkStorageInstead\" type=\"System.Boolean\" isBlackboard=\"False\"
+    value=\"False\" />\r\n        </inputValues>\r\n      </inputParams>\r\n      <outputParams
+    />\r\n      <localParams />\r\n    </ConditionNode>\r\n    <ActionNode id=\"48\"
+    action=\"MyActions/ArriveByTag\">\r\n      <inputParams>\r\n        <inputValues>\r\n
+    \         <entry name=\"tag\" type=\"System.String\" isBlackboard=\"False\" value=\"FRONTDESK\"
+    />\r\n          <entry name=\"closeEnough\" type=\"System.Single\" isBlackboard=\"False\"
+    value=\"0.5\" />\r\n        </inputValues>\r\n      </inputParams>\r\n      <outputParams
+    />\r\n      <localParams />\r\n    </ActionNode>\r\n    <ActionNode id=\"51\"
+    action=\"MyActions/TellEngaged\">\r\n      <inputParams>\r\n        <inputValues>\r\n
+    \         <entry name=\"index\" type=\"System.Int32\" isBlackboard=\"False\" value=\"14\"
+    />\r\n          <entry name=\"duration\" type=\"System.Int32\" isBlackboard=\"False\"
+    value=\"2\" />\r\n        </inputValues>\r\n      </inputParams>\r\n      <outputParams
+    />\r\n      <localParams />\r\n    </ActionNode>\r\n    <ActionNode id=\"49\"
+    action=\"MyActions/Sell\">\r\n      <inputParams>\r\n        <inputValues>\r\n
+    \         <entry name=\"item\" type=\"System.String\" isBlackboard=\"True\" blackboard=\"itemRequested\"
+    />\r\n        </inputValues>\r\n      </inputParams>\r\n      <outputParams />\r\n
+    \     <localParams />\r\n    </ActionNode>\r\n    <ActionNode id=\"50\" action=\"MyActions/DisengageFromDialog\">\r\n
+    \     <inputParams />\r\n      <outputParams />\r\n      <localParams />\r\n    </ActionNode>\r\n
+    \   <SequenceNode id=\"77\">\r\n      <children>\r\n        <elem>\r\n          <ConditionNode
+    id=\"62\" />\r\n        </elem>\r\n        <elem>\r\n          <ActionNode id=\"47\"
+    />\r\n        </elem>\r\n        <elem>\r\n          <ActionNode id=\"57\" />\r\n
+    \       </elem>\r\n      </children>\r\n      <inputParams />\r\n      <outputParams
+    />\r\n      <localParams />\r\n    </SequenceNode>\r\n    <SequenceNode id=\"85\">\r\n
+    \     <children>\r\n        <elem>\r\n          <NotDecorator id=\"84\" />\r\n
+    \       </elem>\r\n        <elem>\r\n          <ActionNode id=\"74\" />\r\n        </elem>\r\n
+    \     </children>\r\n      <inputParams />\r\n      <outputParams />\r\n      <localParams
+    />\r\n    </SequenceNode>\r\n    <ConditionNode id=\"62\">\r\n      <condition>\r\n
+    \       <ConditionEvalNode id=\"0\" />\r\n      </condition>\r\n      <inputParams>\r\n
+    \       <inputValues>\r\n          <entry name=\"item\" type=\"System.String\"
+    isBlackboard=\"True\" blackboard=\"itemRequested\" />\r\n          <entry name=\"checkStorageInstead\"
+    type=\"System.Boolean\" isBlackboard=\"False\" value=\"True\" />\r\n        </inputValues>\r\n
+    \     </inputParams>\r\n      <outputParams />\r\n      <localParams />\r\n    </ConditionNode>\r\n
+    \   <ActionNode id=\"47\" action=\"MyActions/TellEngaged\">\r\n      <inputParams>\r\n
+    \       <inputValues>\r\n          <entry name=\"index\" type=\"System.Int32\"
+    isBlackboard=\"False\" value=\"18\" />\r\n          <entry name=\"duration\" type=\"System.Int32\"
+    isBlackboard=\"False\" value=\"2\" />\r\n        </inputValues>\r\n      </inputParams>\r\n
+    \     <outputParams />\r\n      <localParams />\r\n    </ActionNode>\r\n    <ActionNode
+    id=\"57\" action=\"MyActions/ReplenishItem\">\r\n      <inputParams>\r\n        <inputValues>\r\n
+    \         <entry name=\"itemToReplenish\" type=\"System.String\" isBlackboard=\"True\"
+    blackboard=\"itemRequested\" />\r\n          <entry name=\"increaseAmount\" type=\"System.Int32\"
+    isBlackboard=\"False\" value=\"5\" />\r\n        </inputValues>\r\n      </inputParams>\r\n
+    \     <outputParams />\r\n      <localParams />\r\n    </ActionNode>\r\n    <NotDecorator
+    id=\"84\">\r\n      <child>\r\n        <ConditionNode id=\"83\" />\r\n      </child>\r\n
+    \     <inputParams />\r\n      <outputParams />\r\n      <localParams />\r\n    </NotDecorator>\r\n
+    \   <ActionNode id=\"74\" action=\"MyActions/TellEngaged\">\r\n      <inputParams>\r\n
+    \       <inputValues>\r\n          <entry name=\"index\" type=\"System.Int32\"
+    isBlackboard=\"False\" value=\"19\" />\r\n          <entry name=\"duration\" type=\"System.Int32\"
+    isBlackboard=\"False\" value=\"2\" />\r\n        </inputValues>\r\n      </inputParams>\r\n
+    \     <outputParams />\r\n      <localParams />\r\n    </ActionNode>\r\n    <ConditionNode
+    id=\"83\">\r\n      <condition>\r\n        <ConditionEvalNode id=\"0\" />\r\n
+    \     </condition>\r\n      <inputParams>\r\n        <inputValues>\r\n          <entry
+    name=\"item\" type=\"System.String\" isBlackboard=\"True\" blackboard=\"itemRequested\"
+    />\r\n          <entry name=\"checkStorageInstead\" type=\"System.Boolean\" isBlackboard=\"False\"
+    value=\"True\" />\r\n        </inputValues>\r\n      </inputParams>\r\n      <outputParams
+    />\r\n      <localParams />\r\n    </ConditionNode>\r\n  </runtimeInfo>\r\n  <editorInfo>\r\n
+    \   <BehaviorTree id=\"0\" _name=\"BT_ANITA\" _description=\"\" _removeIfClosed=\"False\">\r\n
+    \     <_rootList>\r\n        <elem>\r\n          <SequenceNode id=\"5\" />\r\n
+    \       </elem>\r\n        <elem>\r\n          <SequenceNode id=\"6\" />\r\n        </elem>\r\n
+    \       <elem>\r\n          <PrioritySelectorNode id=\"7\" />\r\n        </elem>\r\n
+    \       <elem>\r\n          <ConditionEvalNode id=\"8\" />\r\n        </elem>\r\n
+    \       <elem>\r\n          <ConditionEvalNode id=\"9\" />\r\n        </elem>\r\n
+    \       <elem>\r\n          <ActionNode id=\"10\" />\r\n        </elem>\r\n        <elem>\r\n
+    \         <ActionNode id=\"11\" />\r\n        </elem>\r\n        <elem>\r\n          <ActionNode
+    id=\"12\" />\r\n        </elem>\r\n        <elem>\r\n          <SequenceNode id=\"13\"
+    />\r\n        </elem>\r\n        <elem>\r\n          <ActionNode id=\"14\" />\r\n
+    \       </elem>\r\n        <elem>\r\n          <ActionNode id=\"15\" />\r\n        </elem>\r\n
+    \       <elem>\r\n          <ActionNode id=\"16\" />\r\n        </elem>\r\n        <elem>\r\n
+    \         <ActionNode id=\"17\" />\r\n        </elem>\r\n        <elem>\r\n          <ActionNode
+    id=\"18\" />\r\n        </elem>\r\n        <elem>\r\n          <ActionNode id=\"19\"
+    />\r\n        </elem>\r\n        <elem>\r\n          <SelectorNode id=\"20\" />\r\n
+    \       </elem>\r\n        <elem>\r\n          <ActionNode id=\"21\" />\r\n        </elem>\r\n
+    \       <elem>\r\n          <SequenceNode id=\"25\" />\r\n        </elem>\r\n
+    \       <elem>\r\n          <ActionNode id=\"26\" />\r\n        </elem>\r\n        <elem>\r\n
+    \         <ActionNode id=\"27\" />\r\n        </elem>\r\n        <elem>\r\n          <SequenceNode
+    id=\"31\" />\r\n        </elem>\r\n        <elem>\r\n          <ActionNode id=\"33\"
+    />\r\n        </elem>\r\n        <elem>\r\n          <SelectorNode id=\"34\" />\r\n
     \       </elem>\r\n        <elem>\r\n          <SequenceNode id=\"35\" />\r\n
     \       </elem>\r\n        <elem>\r\n          <ActionNode id=\"36\" />\r\n        </elem>\r\n
     \       <elem>\r\n          <ActionNode id=\"37\" />\r\n        </elem>\r\n        <elem>\r\n
     \         <ActionNode id=\"38\" />\r\n        </elem>\r\n        <elem>\r\n          <SequenceNode
     id=\"39\" />\r\n        </elem>\r\n        <elem>\r\n          <ActionNode id=\"40\"
     />\r\n        </elem>\r\n        <elem>\r\n          <ActionNode id=\"41\" />\r\n
+    \       </elem>\r\n        <elem>\r\n          <SequenceNode id=\"42\" />\r\n
+    \       </elem>\r\n        <elem>\r\n          <ActionNode id=\"44\" />\r\n        </elem>\r\n
+    \       <elem>\r\n          <ActionNode id=\"45\" />\r\n        </elem>\r\n        <elem>\r\n
+    \         <ActionNode id=\"47\" />\r\n        </elem>\r\n        <elem>\r\n          <ActionNode
+    id=\"48\" />\r\n        </elem>\r\n        <elem>\r\n          <ActionNode id=\"49\"
+    />\r\n        </elem>\r\n        <elem>\r\n          <ActionNode id=\"50\" />\r\n
+    \       </elem>\r\n        <elem>\r\n          <ActionNode id=\"51\" />\r\n        </elem>\r\n
+    \       <elem>\r\n          <SequenceNode id=\"56\" />\r\n        </elem>\r\n
+    \       <elem>\r\n          <ActionNode id=\"57\" />\r\n        </elem>\r\n        <elem>\r\n
+    \         <SequenceNode id=\"58\" />\r\n        </elem>\r\n        <elem>\r\n
+    \         <ConditionNode id=\"61\" />\r\n        </elem>\r\n        <elem>\r\n
+    \         <ConditionNode id=\"62\" />\r\n        </elem>\r\n        <elem>\r\n
+    \         <ConditionNode id=\"63\" />\r\n        </elem>\r\n        <elem>\r\n
+    \         <ActionNode id=\"74\" />\r\n        </elem>\r\n        <elem>\r\n          <SequenceNode
+    id=\"77\" />\r\n        </elem>\r\n        <elem>\r\n          <ConditionNode
+    id=\"83\" />\r\n        </elem>\r\n        <elem>\r\n          <NotDecorator id=\"84\"
+    />\r\n        </elem>\r\n        <elem>\r\n          <SequenceNode id=\"85\" />\r\n
+    \       </elem>\r\n        <elem>\r\n          <SelectorNode id=\"86\" />\r\n
     \       </elem>\r\n      </_rootList>\r\n      <_nodes>\r\n        <nodes>\r\n
     \         <SequenceNode id=\"6\" />\r\n          <SequenceNode id=\"5\" />\r\n
     \         <PrioritySelectorNode id=\"7\" />\r\n          <ConditionEvalNode id=\"8\"
@@ -208,174 +313,285 @@ MonoBehaviour:
     \         <ActionNode id=\"15\" />\r\n          <ActionNode id=\"16\" />\r\n          <ActionNode
     id=\"17\" />\r\n          <ActionNode id=\"18\" />\r\n          <ActionNode id=\"19\"
     />\r\n          <SelectorNode id=\"20\" />\r\n          <ActionNode id=\"21\"
-    />\r\n          <SelectorNode id=\"34\" />\r\n          <ConditionNode id=\"24\"
-    />\r\n          <SequenceNode id=\"25\" />\r\n          <ActionNode id=\"26\"
-    />\r\n          <ActionNode id=\"27\" />\r\n          <ActionNode id=\"37\" />\r\n
-    \         <SequenceNode id=\"31\" />\r\n          <ActionNode id=\"33\" />\r\n
-    \         <SequenceNode id=\"35\" />\r\n          <ActionNode id=\"36\" />\r\n
-    \         <ActionNode id=\"38\" />\r\n          <SequenceNode id=\"39\" />\r\n
-    \         <ActionNode id=\"40\" />\r\n          <ActionNode id=\"41\" />\r\n        </nodes>\r\n
-    \     </_nodes>\r\n    </BehaviorTree>\r\n    <PrioritySelectorNode id=\"7\">\r\n
-    \     <_data>\r\n        <data breakpoint=\"0\" selected=\"False\" position=\"-292.0818
-    -857.4764\" name=\"Priority Selector\" description=\"\" cardinality=\"1\" hasParent=\"False\">\r\n
+    />\r\n          <SelectorNode id=\"34\" />\r\n          <SequenceNode id=\"25\"
+    />\r\n          <ActionNode id=\"26\" />\r\n          <ActionNode id=\"27\" />\r\n
+    \         <ActionNode id=\"37\" />\r\n          <SequenceNode id=\"31\" />\r\n
+    \         <ActionNode id=\"33\" />\r\n          <SequenceNode id=\"35\" />\r\n
+    \         <ActionNode id=\"36\" />\r\n          <ActionNode id=\"38\" />\r\n          <SequenceNode
+    id=\"39\" />\r\n          <ActionNode id=\"40\" />\r\n          <ActionNode id=\"41\"
+    />\r\n          <SequenceNode id=\"42\" />\r\n          <ConditionNode id=\"63\"
+    />\r\n          <ActionNode id=\"44\" />\r\n          <ActionNode id=\"45\" />\r\n
+    \         <ActionNode id=\"47\" />\r\n          <ActionNode id=\"48\" />\r\n          <ActionNode
+    id=\"49\" />\r\n          <ActionNode id=\"50\" />\r\n          <ActionNode id=\"51\"
+    />\r\n          <ConditionNode id=\"62\" />\r\n          <SequenceNode id=\"56\"
+    />\r\n          <ActionNode id=\"57\" />\r\n          <SequenceNode id=\"58\"
+    />\r\n          <ConditionNode id=\"61\" />\r\n          <ActionNode id=\"74\"
+    />\r\n          <NotDecorator id=\"84\" />\r\n          <SequenceNode id=\"77\"
+    />\r\n          <ConditionNode id=\"83\" />\r\n          <SequenceNode id=\"85\"
+    />\r\n          <SelectorNode id=\"86\" />\r\n        </nodes>\r\n      </_nodes>\r\n
+    \   </BehaviorTree>\r\n    <PrioritySelectorNode id=\"7\">\r\n      <_data>\r\n
+    \       <data breakpoint=\"0\" selected=\"False\" position=\"-167.6374 -1393.534\"
+    name=\"Priority Selector\" description=\"\" cardinality=\"1\" hasParent=\"False\">\r\n
     \         <BehaviorTree id=\"0\" />\r\n          <PrioritySelectorNode id=\"7\"
     />\r\n        </data>\r\n      </_data>\r\n    </PrioritySelectorNode>\r\n    <ConditionEvalNode
     id=\"8\">\r\n      <_data>\r\n        <data breakpoint=\"0\" selected=\"False\"
-    position=\"-728.3309 -644.2256\" name=\"MyConditions/CustomerInStore\" description=\"Eval\"
+    position=\"-603.9008 -1180.284\" name=\"MyConditions/CustomerInStore\" description=\"Eval\"
     cardinality=\"1\" hasParent=\"True\">\r\n          <BehaviorTree id=\"0\" />\r\n
     \         <ConditionEvalNode id=\"8\" />\r\n          <PrioritySelectorNode id=\"7\"
     />\r\n        </data>\r\n      </_data>\r\n    </ConditionEvalNode>\r\n    <SequenceNode
     id=\"5\">\r\n      <_data>\r\n        <data breakpoint=\"0\" selected=\"False\"
-    position=\"-728.3309 -644.2256\" name=\"Sequence\" description=\"Executes all
+    position=\"-603.9008 -1180.284\" name=\"Sequence\" description=\"Executes all
     its children in sequence until all of them are successful\" cardinality=\"-1\"
     hasParent=\"False\">\r\n          <BehaviorTree id=\"0\" />\r\n          <SequenceNode
     id=\"5\" />\r\n        </data>\r\n      </_data>\r\n    </SequenceNode>\r\n    <ConditionEvalNode
     id=\"9\">\r\n      <_data>\r\n        <data breakpoint=\"0\" selected=\"False\"
-    position=\"273.9204 -658.9755\" name=\"AlwaysTrue\" description=\"Eval\" cardinality=\"1\"
+    position=\"398.3773 -1195.033\" name=\"AlwaysTrue\" description=\"Eval\" cardinality=\"1\"
     hasParent=\"True\">\r\n          <BehaviorTree id=\"0\" />\r\n          <ConditionEvalNode
     id=\"9\" />\r\n          <PrioritySelectorNode id=\"7\" />\r\n        </data>\r\n
     \     </_data>\r\n    </ConditionEvalNode>\r\n    <SequenceNode id=\"6\">\r\n
-    \     <_data>\r\n        <data breakpoint=\"0\" selected=\"False\" position=\"273.9204
-    -658.9755\" name=\"Sequence\" description=\"Executes all its children in sequence
+    \     <_data>\r\n        <data breakpoint=\"0\" selected=\"False\" position=\"398.3773
+    -1195.033\" name=\"Sequence\" description=\"Executes all its children in sequence
     until all of them are successful\" cardinality=\"-1\" hasParent=\"False\">\r\n
     \         <BehaviorTree id=\"0\" />\r\n          <SequenceNode id=\"6\" />\r\n
     \       </data>\r\n      </_data>\r\n    </SequenceNode>\r\n    <SequenceNode
     id=\"13\">\r\n      <_data>\r\n        <data breakpoint=\"0\" selected=\"False\"
-    position=\"-1274.83 -346.3104\" name=\"Sequence\" description=\"Executes all its
-    children in sequence until all of them are successful\" cardinality=\"-1\" hasParent=\"True\">\r\n
-    \         <BehaviorTree id=\"0\" />\r\n          <SequenceNode id=\"13\" />\r\n
-    \         <SequenceNode id=\"5\" />\r\n        </data>\r\n      </_data>\r\n    </SequenceNode>\r\n
-    \   <ActionNode id=\"17\">\r\n      <_data>\r\n        <data breakpoint=\"0\"
-    selected=\"False\" position=\"-881.7039 -354.7275\" name=\"MyActions/EngageInDialog\"
+    position=\"-1150.363 -882.3724\" name=\"Sequence\" description=\"Executes all
+    its children in sequence until all of them are successful\" cardinality=\"-1\"
+    hasParent=\"True\">\r\n          <BehaviorTree id=\"0\" />\r\n          <SequenceNode
+    id=\"13\" />\r\n          <SequenceNode id=\"5\" />\r\n        </data>\r\n      </_data>\r\n
+    \   </SequenceNode>\r\n    <ActionNode id=\"17\">\r\n      <_data>\r\n        <data
+    breakpoint=\"0\" selected=\"False\" position=\"-757.2746 -890.7899\" name=\"MyActions/EngageInDialog\"
     description=\"Engage in a dialog with a partner\" cardinality=\"0\" hasParent=\"True\">\r\n
     \         <BehaviorTree id=\"0\" />\r\n          <ActionNode id=\"17\" />\r\n
     \         <SequenceNode id=\"5\" />\r\n        </data>\r\n      </_data>\r\n    </ActionNode>\r\n
     \   <ActionNode id=\"18\">\r\n      <_data>\r\n        <data breakpoint=\"0\"
-    selected=\"False\" position=\"-639.2076 -343.4771\" name=\"MyActions/AskEngaged\"
+    selected=\"False\" position=\"-514.7729 -879.5391\" name=\"MyActions/AskEngaged\"
     description=\"Ask a question to the dialog partner -fail if none-\" cardinality=\"0\"
     hasParent=\"True\">\r\n          <BehaviorTree id=\"0\" />\r\n          <ActionNode
     id=\"18\" />\r\n          <SequenceNode id=\"5\" />\r\n        </data>\r\n      </_data>\r\n
     \   </ActionNode>\r\n    <SelectorNode id=\"20\">\r\n      <_data>\r\n        <data
-    breakpoint=\"0\" selected=\"False\" position=\"-162.7795 -319.7267\" name=\"Selector\"
+    breakpoint=\"0\" selected=\"False\" position=\"-38.33517 -855.7902\" name=\"Selector\"
     description=\"Executes all its children until one of them is successful\" cardinality=\"-1\"
     hasParent=\"True\">\r\n          <BehaviorTree id=\"0\" />\r\n          <SelectorNode
     id=\"20\" />\r\n          <SequenceNode id=\"5\" />\r\n        </data>\r\n      </_data>\r\n
     \   </SelectorNode>\r\n    <ActionNode id=\"19\">\r\n      <_data>\r\n        <data
-    breakpoint=\"0\" selected=\"False\" position=\"55.54419 -415.5886\" name=\"MyActions/ClearUtterance\"
+    breakpoint=\"0\" selected=\"False\" position=\"179.9954 -951.6532\" name=\"MyActions/ClearUtterance\"
     description=\"Clears utterance text\" cardinality=\"0\" hasParent=\"True\">\r\n
     \         <BehaviorTree id=\"0\" />\r\n          <ActionNode id=\"19\" />\r\n
     \         <SequenceNode id=\"6\" />\r\n        </data>\r\n      </_data>\r\n    </ActionNode>\r\n
     \   <ActionNode id=\"10\">\r\n      <_data>\r\n        <data breakpoint=\"0\"
-    selected=\"False\" position=\"277.7515 -417.033\" name=\"GameObject/SetActive\"
+    selected=\"False\" position=\"402.2068 -953.0978\" name=\"GameObject/SetActive\"
     description=\"Activates or deactivates the game object\" cardinality=\"0\" hasParent=\"True\">\r\n
     \         <BehaviorTree id=\"0\" />\r\n          <ActionNode id=\"10\" />\r\n
     \         <SequenceNode id=\"6\" />\r\n        </data>\r\n      </_data>\r\n    </ActionNode>\r\n
     \   <ActionNode id=\"11\">\r\n      <_data>\r\n        <data breakpoint=\"0\"
-    selected=\"False\" position=\"455.8364 -413.3385\" name=\"GameObject/SetActive\"
+    selected=\"False\" position=\"580.2993 -949.4036\" name=\"GameObject/SetActive\"
     description=\"Activates or deactivates the game object\" cardinality=\"0\" hasParent=\"True\">\r\n
     \         <BehaviorTree id=\"0\" />\r\n          <ActionNode id=\"11\" />\r\n
     \         <SequenceNode id=\"6\" />\r\n        </data>\r\n      </_data>\r\n    </ActionNode>\r\n
     \   <ActionNode id=\"12\">\r\n      <_data>\r\n        <data breakpoint=\"0\"
-    selected=\"False\" position=\"613.6145 -414.672\" name=\"MyActions/Wander Around\"
+    selected=\"False\" position=\"738.0823 -950.7367\" name=\"MyActions/Wander Around\"
     description=\"Wanders around an attractor\" cardinality=\"0\" hasParent=\"True\">\r\n
     \         <BehaviorTree id=\"0\" />\r\n          <ActionNode id=\"12\" />\r\n
     \         <SequenceNode id=\"6\" />\r\n        </data>\r\n      </_data>\r\n    </ActionNode>\r\n
     \   <ActionNode id=\"14\">\r\n      <_data>\r\n        <data breakpoint=\"0\"
-    selected=\"False\" position=\"-1519.162 -153.3922\" name=\"GameObject/SetActive\"
+    selected=\"False\" position=\"-1394.679 -689.4548\" name=\"GameObject/SetActive\"
     description=\"Activates or deactivates the game object\" cardinality=\"0\" hasParent=\"True\">\r\n
     \         <BehaviorTree id=\"0\" />\r\n          <ActionNode id=\"14\" />\r\n
     \         <SequenceNode id=\"13\" />\r\n        </data>\r\n      </_data>\r\n
     \   </ActionNode>\r\n    <ActionNode id=\"15\">\r\n      <_data>\r\n        <data
-    breakpoint=\"0\" selected=\"False\" position=\"-1305.497 -141.4752\" name=\"GameObject/SetActive\"
+    breakpoint=\"0\" selected=\"False\" position=\"-1181.031 -677.5379\" name=\"GameObject/SetActive\"
     description=\"Activates or deactivates the game object\" cardinality=\"0\" hasParent=\"True\">\r\n
     \         <BehaviorTree id=\"0\" />\r\n          <ActionNode id=\"15\" />\r\n
     \         <SequenceNode id=\"13\" />\r\n        </data>\r\n      </_data>\r\n
     \   </ActionNode>\r\n    <ActionNode id=\"16\">\r\n      <_data>\r\n        <data
-    breakpoint=\"0\" selected=\"False\" position=\"-1039.204 -118.2257\" name=\"MyActions/ArriveByTag\"
+    breakpoint=\"0\" selected=\"False\" position=\"-914.7558 -654.2884\" name=\"MyActions/ArriveByTag\"
     description=\"Goes to (ARRIVES) a location specifieb with a tag\" cardinality=\"0\"
     hasParent=\"True\">\r\n          <BehaviorTree id=\"0\" />\r\n          <ActionNode
     id=\"16\" />\r\n          <SequenceNode id=\"13\" />\r\n        </data>\r\n      </_data>\r\n
     \   </ActionNode>\r\n    <SequenceNode id=\"31\">\r\n      <_data>\r\n        <data
-    breakpoint=\"0\" selected=\"False\" position=\"-549.4574 -207.976\" name=\"Sequence\"
+    breakpoint=\"0\" selected=\"False\" position=\"-341.6853 -722.3741\" name=\"Sequence\"
     description=\"Executes all its children in sequence until all of them are successful\"
     cardinality=\"-1\" hasParent=\"True\">\r\n          <BehaviorTree id=\"0\" />\r\n
     \         <SequenceNode id=\"31\" />\r\n          <SelectorNode id=\"20\" />\r\n
     \       </data>\r\n      </_data>\r\n    </SequenceNode>\r\n    <SequenceNode
     id=\"39\">\r\n      <_data>\r\n        <data breakpoint=\"0\" selected=\"False\"
-    position=\"430.9395 -211.1705\" name=\"Sequence\" description=\"Executes all its
+    position=\"859.399 -759.236\" name=\"Sequence\" description=\"Executes all its
     children in sequence until all of them are successful\" cardinality=\"-1\" hasParent=\"True\">\r\n
     \         <BehaviorTree id=\"0\" />\r\n          <SequenceNode id=\"39\" />\r\n
     \         <SelectorNode id=\"20\" />\r\n        </data>\r\n      </_data>\r\n
     \   </SequenceNode>\r\n    <ActionNode id=\"21\">\r\n      <_data>\r\n        <data
-    breakpoint=\"0\" selected=\"False\" position=\"-757.2064 -61.97548\" name=\"MyActions/ParseAnswer\"
+    breakpoint=\"0\" selected=\"False\" position=\"-601.108 -603.0394\" name=\"MyActions/ParseAnswer\"
     description=\"parse a string to get main element\" cardinality=\"0\" hasParent=\"True\">\r\n
     \         <BehaviorTree id=\"0\" />\r\n          <ActionNode id=\"21\" />\r\n
     \         <SequenceNode id=\"31\" />\r\n        </data>\r\n      </_data>\r\n
     \   </ActionNode>\r\n    <ActionNode id=\"33\">\r\n      <_data>\r\n        <data
-    breakpoint=\"0\" selected=\"False\" position=\"-539.9578 -62.72549\" name=\"MyActions/TellEngaged\"
+    breakpoint=\"0\" selected=\"False\" position=\"-411.9457 -601.1865\" name=\"MyActions/TellEngaged\"
     description=\"Tell something to the dialog partner -fail if none-\" cardinality=\"0\"
     hasParent=\"True\">\r\n          <BehaviorTree id=\"0\" />\r\n          <ActionNode
     id=\"33\" />\r\n          <SequenceNode id=\"31\" />\r\n        </data>\r\n      </_data>\r\n
     \   </ActionNode>\r\n    <SelectorNode id=\"34\">\r\n      <_data>\r\n        <data
-    breakpoint=\"0\" selected=\"False\" position=\"-229.4568 -50.97577\" name=\"Selector\"
+    breakpoint=\"0\" selected=\"False\" position=\"588.9904 -435.0374\" name=\"Selector\"
     description=\"Executes all its children until one of them is successful\" cardinality=\"-1\"
     hasParent=\"True\">\r\n          <BehaviorTree id=\"0\" />\r\n          <SelectorNode
     id=\"34\" />\r\n          <SequenceNode id=\"31\" />\r\n        </data>\r\n      </_data>\r\n
     \   </SelectorNode>\r\n    <ActionNode id=\"40\">\r\n      <_data>\r\n        <data
-    breakpoint=\"0\" selected=\"False\" position=\"336.1633 -67.92061\" name=\"MyActions/TellEngaged\"
+    breakpoint=\"0\" selected=\"False\" position=\"694.6246 -609.985\" name=\"MyActions/TellEngaged\"
     description=\"Tell something to the dialog partner -fail if none-\" cardinality=\"0\"
     hasParent=\"True\">\r\n          <BehaviorTree id=\"0\" />\r\n          <ActionNode
     id=\"40\" />\r\n          <SequenceNode id=\"39\" />\r\n        </data>\r\n      </_data>\r\n
     \   </ActionNode>\r\n    <ActionNode id=\"41\">\r\n      <_data>\r\n        <data
-    breakpoint=\"0\" selected=\"False\" position=\"570.0796 -68.00401\" name=\"MyActions/DisengageFromDialog\"
+    breakpoint=\"0\" selected=\"False\" position=\"976.5429 -602.0679\" name=\"MyActions/DisengageFromDialog\"
     description=\"Stop dialoguin with partner, if any\" cardinality=\"0\" hasParent=\"True\">\r\n
     \         <BehaviorTree id=\"0\" />\r\n          <ActionNode id=\"41\" />\r\n
     \         <SequenceNode id=\"39\" />\r\n        </data>\r\n      </_data>\r\n
     \   </ActionNode>\r\n    <SequenceNode id=\"25\">\r\n      <_data>\r\n        <data
-    breakpoint=\"0\" selected=\"False\" position=\"-570.1519 155.439\" name=\"Sequence\"
+    breakpoint=\"0\" selected=\"False\" position=\"-521.7142 -172.6196\" name=\"Sequence\"
     description=\"Executes all its children in sequence until all of them are successful\"
     cardinality=\"-1\" hasParent=\"True\">\r\n          <BehaviorTree id=\"0\" />\r\n
     \         <SequenceNode id=\"25\" />\r\n          <SelectorNode id=\"34\" />\r\n
     \       </data>\r\n      </_data>\r\n    </SequenceNode>\r\n    <SequenceNode
-    id=\"35\">\r\n      <_data>\r\n        <data breakpoint=\"0\" selected=\"False\"
-    position=\"449.2646 231.9379\" name=\"Sequence\" description=\"Executes all its
+    id=\"42\">\r\n      <_data>\r\n        <data breakpoint=\"0\" selected=\"False\"
+    position=\"660.9691 -182.6103\" name=\"Sequence\" description=\"Executes all its
     children in sequence until all of them are successful\" cardinality=\"-1\" hasParent=\"True\">\r\n
-    \         <BehaviorTree id=\"0\" />\r\n          <SequenceNode id=\"35\" />\r\n
+    \         <BehaviorTree id=\"0\" />\r\n          <SequenceNode id=\"42\" />\r\n
     \         <SelectorNode id=\"34\" />\r\n        </data>\r\n      </_data>\r\n
-    \   </SequenceNode>\r\n    <ConditionNode id=\"24\">\r\n      <_data>\r\n        <data
-    breakpoint=\"0\" selected=\"False\" position=\"-956.0773 406.2166\" name=\"MyConditions/CheckExistences\"
-    description=\"Check whether we have that (item) or not\" cardinality=\"0\" hasParent=\"True\">\r\n
-    \         <BehaviorTree id=\"0\" />\r\n          <ConditionNode id=\"24\" />\r\n
+    \   </SequenceNode>\r\n    <SequenceNode id=\"35\">\r\n      <_data>\r\n        <data
+    breakpoint=\"0\" selected=\"False\" position=\"2227.671 -145.7522\" name=\"Sequence\"
+    description=\"Executes all its children in sequence until all of them are successful\"
+    cardinality=\"-1\" hasParent=\"True\">\r\n          <BehaviorTree id=\"0\" />\r\n
+    \         <SequenceNode id=\"35\" />\r\n          <SelectorNode id=\"34\" />\r\n
+    \       </data>\r\n      </_data>\r\n    </SequenceNode>\r\n    <ConditionNode
+    id=\"61\">\r\n      <_data>\r\n        <data breakpoint=\"0\" selected=\"False\"
+    position=\"-830.3497 57.75018\" name=\"MyConditions/CheckExistences\" description=\"Check
+    whether we have that (item) or not, use the bool to check the storage instead
+    (know why we did this in this way on the report)\" cardinality=\"0\" hasParent=\"True\">\r\n
+    \         <BehaviorTree id=\"0\" />\r\n          <ConditionNode id=\"61\" />\r\n
     \         <SequenceNode id=\"25\" />\r\n        </data>\r\n      </_data>\r\n
     \   </ConditionNode>\r\n    <ActionNode id=\"37\">\r\n      <_data>\r\n        <data
-    breakpoint=\"0\" selected=\"False\" position=\"-705.7554 401.2172\" name=\"MyActions/TellEngaged\"
+    breakpoint=\"0\" selected=\"False\" position=\"-582.7521 56.86736\" name=\"MyActions/TellEngaged\"
     description=\"Tell something to the dialog partner -fail if none-\" cardinality=\"0\"
     hasParent=\"True\">\r\n          <BehaviorTree id=\"0\" />\r\n          <ActionNode
     id=\"37\" />\r\n          <SequenceNode id=\"25\" />\r\n        </data>\r\n      </_data>\r\n
     \   </ActionNode>\r\n    <ActionNode id=\"26\">\r\n      <_data>\r\n        <data
-    breakpoint=\"0\" selected=\"False\" position=\"-493.8738 398.2725\" name=\"MyActions/Sell\"
+    breakpoint=\"0\" selected=\"False\" position=\"-400.005 51.92212\" name=\"MyActions/Sell\"
     description=\"Sell item\" cardinality=\"0\" hasParent=\"True\">\r\n          <BehaviorTree
     id=\"0\" />\r\n          <ActionNode id=\"26\" />\r\n          <SequenceNode id=\"25\"
     />\r\n        </data>\r\n      </_data>\r\n    </ActionNode>\r\n    <ActionNode
     id=\"38\">\r\n      <_data>\r\n        <data breakpoint=\"0\" selected=\"False\"
-    position=\"-370.6423 387.2172\" name=\"MyActions/DisengageFromDialog\" description=\"Stop
+    position=\"-285.0598 51.43844\" name=\"MyActions/DisengageFromDialog\" description=\"Stop
     dialoguin with partner, if any\" cardinality=\"0\" hasParent=\"True\">\r\n          <BehaviorTree
     id=\"0\" />\r\n          <ActionNode id=\"38\" />\r\n          <SequenceNode id=\"25\"
+    />\r\n        </data>\r\n      </_data>\r\n    </ActionNode>\r\n    <SequenceNode
+    id=\"56\">\r\n      <_data>\r\n        <data breakpoint=\"0\" selected=\"False\"
+    position=\"449.0192 44.98014\" name=\"Sequence\" description=\"Executes all its
+    children in sequence until all of them are successful\" cardinality=\"-1\" hasParent=\"True\">\r\n
+    \         <BehaviorTree id=\"0\" />\r\n          <SequenceNode id=\"56\" />\r\n
+    \         <SequenceNode id=\"42\" />\r\n        </data>\r\n      </_data>\r\n
+    \   </SequenceNode>\r\n    <SequenceNode id=\"58\">\r\n      <_data>\r\n        <data
+    breakpoint=\"0\" selected=\"False\" position=\"1536.163 -6.091257\" name=\"Sequence\"
+    description=\"Executes all its children in sequence until all of them are successful\"
+    cardinality=\"-1\" hasParent=\"True\">\r\n          <BehaviorTree id=\"0\" />\r\n
+    \         <SequenceNode id=\"58\" />\r\n          <SequenceNode id=\"42\" />\r\n
+    \       </data>\r\n      </_data>\r\n    </SequenceNode>\r\n    <ActionNode id=\"36\">\r\n
+    \     <_data>\r\n        <data breakpoint=\"0\" selected=\"False\" position=\"2062.379
+    -3.349807\" name=\"MyActions/TellEngaged\" description=\"Tell something to the
+    dialog partner -fail if none-\" cardinality=\"0\" hasParent=\"True\">\r\n          <BehaviorTree
+    id=\"0\" />\r\n          <ActionNode id=\"36\" />\r\n          <SequenceNode id=\"35\"
     />\r\n        </data>\r\n      </_data>\r\n    </ActionNode>\r\n    <ActionNode
-    id=\"36\">\r\n      <_data>\r\n        <data breakpoint=\"0\" selected=\"False\"
-    position=\"344.5161 385.968\" name=\"MyActions/TellEngaged\" description=\"Tell
+    id=\"27\">\r\n      <_data>\r\n        <data breakpoint=\"0\" selected=\"False\"
+    position=\"2260.909 -5.531534\" name=\"MyActions/DisengageFromDialog\" description=\"Stop
+    dialoguin with partner, if any\" cardinality=\"0\" hasParent=\"True\">\r\n          <BehaviorTree
+    id=\"0\" />\r\n          <ActionNode id=\"27\" />\r\n          <SequenceNode id=\"35\"
+    />\r\n        </data>\r\n      </_data>\r\n    </ActionNode>\r\n    <ConditionEvalNode
+    id=\"0\">\r\n      <_data>\r\n        <data breakpoint=\"0\" selected=\"False\"
+    position=\"0 0\" name=\"AlwaysTrue\" description=\"Eval\" cardinality=\"1\" hasParent=\"False\">\r\n
+    \         <BehaviorTree id=\"0\" />\r\n        </data>\r\n      </_data>\r\n    </ConditionEvalNode>\r\n
+    \   <ActionNode id=\"45\">\r\n      <_data>\r\n        <data breakpoint=\"0\"
+    selected=\"False\" position=\"-179.9238 350.7573\" name=\"MyActions/TellEngaged\"
+    description=\"Tell something to the dialog partner -fail if none-\" cardinality=\"0\"
+    hasParent=\"True\">\r\n          <BehaviorTree id=\"0\" />\r\n          <SequenceNode
+    id=\"56\" />\r\n          <SequenceNode id=\"56\" />\r\n        </data>\r\n      </_data>\r\n
+    \   </ActionNode>\r\n    <ActionNode id=\"44\">\r\n      <_data>\r\n        <data
+    breakpoint=\"0\" selected=\"False\" position=\"60.1221 355.4952\" name=\"MyActions/ArriveByTag\"
+    description=\"Goes to (ARRIVES) a location specifieb with a tag\" cardinality=\"0\"
+    hasParent=\"True\">\r\n          <BehaviorTree id=\"0\" />\r\n          <SequenceNode
+    id=\"56\" />\r\n          <SequenceNode id=\"56\" />\r\n        </data>\r\n      </_data>\r\n
+    \   </ActionNode>\r\n    <SelectorNode id=\"86\">\r\n      <_data>\r\n        <data
+    breakpoint=\"0\" selected=\"False\" position=\"521.9827 205.716\" name=\"Selector\"
+    description=\"Executes all its children until one of them is successful\" cardinality=\"-1\"
+    hasParent=\"True\">\r\n          <BehaviorTree id=\"0\" />\r\n          <SelectorNode
+    id=\"86\" />\r\n          <SequenceNode id=\"56\" />\r\n        </data>\r\n      </_data>\r\n
+    \   </SelectorNode>\r\n    <ConditionNode id=\"63\">\r\n      <_data>\r\n        <data
+    breakpoint=\"0\" selected=\"False\" position=\"1222.162 247.7505\" name=\"MyConditions/CheckExistences\"
+    description=\"Check whether we have that (item) or not, use the bool to check
+    the storage instead (know why we did this in this way on the report)\" cardinality=\"0\"
+    hasParent=\"True\">\r\n          <BehaviorTree id=\"0\" />\r\n          <ConditionNode
+    id=\"63\" />\r\n          <SequenceNode id=\"58\" />\r\n        </data>\r\n      </_data>\r\n
+    \   </ConditionNode>\r\n    <ActionNode id=\"48\">\r\n      <_data>\r\n        <data
+    breakpoint=\"0\" selected=\"False\" position=\"1434.539 248.12\" name=\"MyActions/ArriveByTag\"
+    description=\"Goes to (ARRIVES) a location specifieb with a tag\" cardinality=\"0\"
+    hasParent=\"True\">\r\n          <BehaviorTree id=\"0\" />\r\n          <ActionNode
+    id=\"48\" />\r\n          <SequenceNode id=\"58\" />\r\n        </data>\r\n      </_data>\r\n
+    \   </ActionNode>\r\n    <ActionNode id=\"51\">\r\n      <_data>\r\n        <data
+    breakpoint=\"0\" selected=\"False\" position=\"1613.861 251.4413\" name=\"MyActions/TellEngaged\"
+    description=\"Tell something to the dialog partner -fail if none-\" cardinality=\"0\"
+    hasParent=\"True\">\r\n          <BehaviorTree id=\"0\" />\r\n          <ActionNode
+    id=\"51\" />\r\n          <SequenceNode id=\"58\" />\r\n        </data>\r\n      </_data>\r\n
+    \   </ActionNode>\r\n    <ActionNode id=\"49\">\r\n      <_data>\r\n        <data
+    breakpoint=\"0\" selected=\"False\" position=\"1787.641 247.691\" name=\"MyActions/Sell\"
+    description=\"Sell item\" cardinality=\"0\" hasParent=\"True\">\r\n          <BehaviorTree
+    id=\"0\" />\r\n          <ActionNode id=\"49\" />\r\n          <SequenceNode id=\"58\"
+    />\r\n        </data>\r\n      </_data>\r\n    </ActionNode>\r\n    <ActionNode
+    id=\"50\">\r\n      <_data>\r\n        <data breakpoint=\"0\" selected=\"False\"
+    position=\"1915.509 251.1915\" name=\"MyActions/DisengageFromDialog\" description=\"Stop
+    dialoguin with partner, if any\" cardinality=\"0\" hasParent=\"True\">\r\n          <BehaviorTree
+    id=\"0\" />\r\n          <ActionNode id=\"50\" />\r\n          <SequenceNode id=\"58\"
+    />\r\n        </data>\r\n      </_data>\r\n    </ActionNode>\r\n    <SequenceNode
+    id=\"77\">\r\n      <_data>\r\n        <data breakpoint=\"0\" selected=\"False\"
+    position=\"320.7331 365.7164\" name=\"Sequence\" description=\"Executes all its
+    children in sequence until all of them are successful\" cardinality=\"-1\" hasParent=\"True\">\r\n
+    \         <BehaviorTree id=\"0\" />\r\n          <SequenceNode id=\"77\" />\r\n
+    \         <SelectorNode id=\"86\" />\r\n        </data>\r\n      </_data>\r\n
+    \   </SequenceNode>\r\n    <SequenceNode id=\"85\">\r\n      <_data>\r\n        <data
+    breakpoint=\"0\" selected=\"False\" position=\"726.2707 363.9308\" name=\"Sequence\"
+    description=\"Executes all its children in sequence until all of them are successful\"
+    cardinality=\"-1\" hasParent=\"True\">\r\n          <BehaviorTree id=\"0\" />\r\n
+    \         <SequenceNode id=\"85\" />\r\n          <SelectorNode id=\"86\" />\r\n
+    \       </data>\r\n      </_data>\r\n    </SequenceNode>\r\n    <ConditionNode
+    id=\"62\">\r\n      <_data>\r\n        <data breakpoint=\"0\" selected=\"False\"
+    position=\"-24.26608 616.5016\" name=\"MyConditions/CheckExistences\" description=\"Check
+    whether we have that (item) or not, use the bool to check the storage instead
+    (know why we did this in this way on the report)\" cardinality=\"0\" hasParent=\"True\">\r\n
+    \         <BehaviorTree id=\"0\" />\r\n          <SequenceNode id=\"77\" />\r\n
+    \         <SequenceNode id=\"77\" />\r\n        </data>\r\n      </_data>\r\n
+    \   </ConditionNode>\r\n    <ActionNode id=\"47\">\r\n      <_data>\r\n        <data
+    breakpoint=\"0\" selected=\"False\" position=\"193.6695 610.48\" name=\"MyActions/TellEngaged\"
+    description=\"Tell something to the dialog partner -fail if none-\" cardinality=\"0\"
+    hasParent=\"True\">\r\n          <BehaviorTree id=\"0\" />\r\n          <SequenceNode
+    id=\"56\" />\r\n          <SequenceNode id=\"77\" />\r\n        </data>\r\n      </_data>\r\n
+    \   </ActionNode>\r\n    <ActionNode id=\"57\">\r\n      <_data>\r\n        <data
+    breakpoint=\"0\" selected=\"False\" position=\"372.4125 611.412\" name=\"MyActions/ReplenishItem\"
+    description=\"\" cardinality=\"0\" hasParent=\"True\">\r\n          <BehaviorTree
+    id=\"0\" />\r\n          <ActionNode id=\"57\" />\r\n          <SequenceNode id=\"77\"
+    />\r\n        </data>\r\n      </_data>\r\n    </ActionNode>\r\n    <NotDecorator
+    id=\"84\">\r\n      <_data>\r\n        <data breakpoint=\"0\" selected=\"False\"
+    position=\"650.7347 483.2169\" name=\"Not\" description=\"Negates the result of
+    the execution\" cardinality=\"1\" hasParent=\"True\">\r\n          <BehaviorTree
+    id=\"0\" />\r\n          <NotDecorator id=\"84\" />\r\n          <SequenceNode
+    id=\"85\" />\r\n        </data>\r\n      </_data>\r\n    </NotDecorator>\r\n    <ActionNode
+    id=\"74\">\r\n      <_data>\r\n        <data breakpoint=\"0\" selected=\"True\"
+    position=\"835.286 618.8249\" name=\"MyActions/TellEngaged\" description=\"Tell
     something to the dialog partner -fail if none-\" cardinality=\"0\" hasParent=\"True\">\r\n
-    \         <BehaviorTree id=\"0\" />\r\n          <ActionNode id=\"36\" />\r\n
-    \         <SequenceNode id=\"35\" />\r\n        </data>\r\n      </_data>\r\n
-    \   </ActionNode>\r\n    <ActionNode id=\"27\">\r\n      <_data>\r\n        <data
-    breakpoint=\"0\" selected=\"False\" position=\"592.5173 387.3566\" name=\"MyActions/DisengageFromDialog\"
-    description=\"Stop dialoguin with partner, if any\" cardinality=\"0\" hasParent=\"True\">\r\n
-    \         <BehaviorTree id=\"0\" />\r\n          <ActionNode id=\"27\" />\r\n
-    \         <SequenceNode id=\"35\" />\r\n        </data>\r\n      </_data>\r\n
-    \   </ActionNode>\r\n    <ConditionEvalNode id=\"0\">\r\n      <_data>\r\n        <data
-    breakpoint=\"0\" selected=\"False\" position=\"0 0\" name=\"AlwaysTrue\" description=\"Eval\"
-    cardinality=\"1\" hasParent=\"False\">\r\n          <BehaviorTree id=\"0\" />\r\n
-    \       </data>\r\n      </_data>\r\n    </ConditionEvalNode>\r\n  </editorInfo>\r\n</BehaviorBricks>"
-  zoom: 1
+    \         <BehaviorTree id=\"0\" />\r\n          <ActionNode id=\"74\" />\r\n
+    \         <SequenceNode id=\"85\" />\r\n        </data>\r\n      </_data>\r\n
+    \   </ActionNode>\r\n    <ConditionNode id=\"83\">\r\n      <_data>\r\n        <data
+    breakpoint=\"0\" selected=\"False\" position=\"585.7336 620.7171\" name=\"MyConditions/CheckExistences\"
+    description=\"Check whether we have that (item) or not, use the bool to check
+    the storage instead (know why we did this in this way on the report)\" cardinality=\"0\"
+    hasParent=\"True\">\r\n          <BehaviorTree id=\"0\" />\r\n          <ConditionNode
+    id=\"83\" />\r\n          <NotDecorator id=\"84\" />\r\n        </data>\r\n      </_data>\r\n
+    \   </ConditionNode>\r\n  </editorInfo>\r\n</BehaviorBricks>"
+  zoom: 0.7
   subslist: []
   _guid: 44799048b1d0bd447b876674653d1192

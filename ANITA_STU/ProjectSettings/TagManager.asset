@@ -10,6 +10,9 @@ TagManager:
   - EX_CUSTOMER
   - STORE_ENTRANCE
   - EXIT_POINT
+  - APPLE
+  - PEACH
+  - STORAGE
   layers:
   - Default
   - TransparentFX

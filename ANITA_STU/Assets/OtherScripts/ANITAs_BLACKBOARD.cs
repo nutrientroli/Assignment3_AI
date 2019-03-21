@@ -1,9 +1,12 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
 public class ANITAs_BLACKBOARD : MonoBehaviour, IDialogSystem
 {
     public int peaches = 2;
     public int apples = 1;
+
+    public bool peachesOnStorage, applesOnStorage;
 
     private TextMesh utteranceLine;
     private TextMesh peachLine, appleLine;
@@ -33,8 +36,9 @@ public class ANITAs_BLACKBOARD : MonoBehaviour, IDialogSystem
         
 
     };
-    
-   
+
+
+
     void Start()
     {
         utteranceLine = gameObject.transform.GetChild(0).GetComponent<TextMesh>();
@@ -47,9 +51,47 @@ public class ANITAs_BLACKBOARD : MonoBehaviour, IDialogSystem
 
     public bool CheckExistences(string item)
     {
-        if (item == "APPLE") return apples > 0;
-        if (item == "PEACH") return peaches > 0;
+        if (item == "APPLE") {
+            Debug.Log(apples > 0);
+            return apples > 0;
+        }
+
+        if (item == "PEACH")
+        {
+            Debug.Log(peaches > 0);
+            return peaches > 0;
+        }
+
         return false;
+    }
+
+    public bool CheckStorage(string item)
+    {
+        switch(item)
+        {
+            case "APPLE":
+                Debug.Log("are apples on storage?");
+                return applesOnStorage;
+
+            case "PEACH":
+                Debug.Log("are peaches on storage?");
+                return peachesOnStorage;
+
+            default:
+                return false;
+        }
+
+    }
+
+    public void IncreaseApplesAmount(int _delta)
+    {
+        apples += _delta;
+        appleLine.text = "x " + apples;
+    }
+    public void IncreasePeachesAmount(int _delta)
+    {
+        peaches += _delta;
+        peachLine.text = "x " + peaches; 
     }
 
     public bool Sell(string item)
@@ -63,6 +105,8 @@ public class ANITAs_BLACKBOARD : MonoBehaviour, IDialogSystem
             default: return false;
         }
     }
+
+    
 
     public void SetUtterance (int index)
     {
@@ -90,6 +134,8 @@ public class ANITAs_BLACKBOARD : MonoBehaviour, IDialogSystem
         }
         return false; // returning false means partner has refused.
     }
+
+    
 
     public bool BeEngagedInDialog(IDialogSystem partner)
     {
